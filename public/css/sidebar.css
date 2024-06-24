@@ -1,0 +1,44 @@
+/* Sidebar */
+
+.sidebar-button {
+    display: none;
+}
+
+@media (max-width: 991px) {
+
+    .sidebar {
+        transform: translateX(-100%);
+        transition: all 0.2s ease-out;
+        z-index: 999;
+    }
+
+    .sidebar-active {
+        transform: translateX(0);
+        transition: all 0.2s ease-out;
+    }
+
+    .sidebar-button {
+        display: block;
+        color: white;
+    }
+
+    .background-dark {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 998;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transform: scale(0);
+        transition: opacity 0.2s ease-out;
+    }
+
+    .background-dark-active {
+        opacity: 1;
+        transform: scale(1);
+        transition: opacity 0.2s ease-out;
+    }
+
+}

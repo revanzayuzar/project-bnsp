@@ -1,0 +1,19 @@
+/* Color */
+
+:root {
+    --color-1: rgb(204, 173, 0);
+
+    --color-hover-1: rgb(187, 171, 78);
+}
+
+.color-1 {
+    background-color: var(--color-1);
+}
+
+.hover-menu:hover {
+    background-color: var(--color-hover-1);
+}
+
+.active-menu {
+    background-color: var(--color-1);
+}
