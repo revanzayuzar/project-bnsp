@@ -1,6 +1,6 @@
 /* Background Image Main */
 
-.bg-image-main {
+body {
     background-image: url('../img/background.jpg');
     background-size: auto;
     background-position: center;

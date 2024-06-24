@@ -36,7 +36,7 @@
     <div class="d-flex">
         {{-- Sidebar Container --}}
         <div class="sidebar col-9 col-sm-6 col-md-4 col-lg-3 col-xl-2 d-flex flex-column bg-success text-light p-3 overflow-y-auto position-absolute top-0 bottom-0"
-            style="height: 100vh; left: 0;">
+            style="height: 100vh; left: 0">
             <a href="{{ route('admin.dashboard.index') }}" class="text-decoration-none">
                 <h1 class="text-warning fw-bold text-center mt-3 mb-5" style="font-size: 100px">
                     P
@@ -53,7 +53,7 @@
         {{-- Sidebar Container End --}}
 
         {{-- Main Container --}}
-        <div class="bg-image-main col-12 col-lg-9 col-xl-10 bg-light overflow-y-auto position-absolute top-0 bottom-0" style="right: 0;">
+        <div class="col-12 col-lg-9 col-xl-10 overflow-y-auto position-absolute top-0 bottom-0" style="right: 0">
             {{-- Main Header --}}
             <nav class="col-12 col-lg-9 col-xl-10 bg-warning d-flex justify-content-between align-items-center shadow-sm px-4 py-3 position-fixed top-0"
                 style="right: 0; z-index: 99">
