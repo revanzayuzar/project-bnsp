@@ -100,7 +100,8 @@
             </div>
             {{-- Content Container End --}}
 
-            <footer class="col-12 col-lg-9 col-xl-10 bg-light position-fixed bottom-0 text-center py-1">
+            <footer class="col-12 col-lg-9 col-xl-10 bg-light position-fixed bottom-0 text-center py-1"
+                style="z-index: 99">
                 <small>Design by Revan | © 2024</small>
             </footer>
         </div>

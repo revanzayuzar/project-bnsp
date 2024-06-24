@@ -49,7 +49,7 @@
         <form action="{{ route('admin.pegawai.store') }}" method="POST" class="p-3 px-sm-5" enctype="multipart/form-data">
             @csrf
             <div class="mx-0 mx-md-5 mx-lg-0 mx-xl-5 mb-4">
-                <label for="foto" class="form-label fw-semibold">Pilih Foto Pegawai</label>
+                <label for="foto" class="form-label fw-semibold">Pilih Foto Pegawai (Maks: 2 MB)</label>
                 <input type="file" class="form-control p-2 border-success" id="foto" name="foto"
                     value="{{ old('foto') }}" placeholder="Pilih Foto Pegawai" required
                     oninvalid="this.setCustomValidity('Harap Pilih Foto Pegawai!')" oninput="setCustomValidity('')">

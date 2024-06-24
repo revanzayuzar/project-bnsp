@@ -50,7 +50,7 @@
             @csrf
             @method('PUT')
             <div class="mx-0 mx-md-5 mx-lg-0 mx-xl-5 mb-4">
-                <label for="foto" class="form-label fw-semibold">Ganti Foto Pegawai</label>
+                <label for="foto" class="form-label fw-semibold">Ganti Foto Pegawai (Maks: 2 MB)</label>
                 <input type="file" class="form-control p-2 border-success" id="foto" name="foto"
                     value="{{ old('foto') }}" placeholder="Pilih Foto Pegawai"
                     oninvalid="this.setCustomValidity('Harap Pilih Foto Pegawai!')" oninput="setCustomValidity('')">

@@ -40,8 +40,16 @@
             <p class="card-text"><span class="fw-semibold">Status Perkawinan :</span> {{ $pegawai->status_perkawinan }}</p>
             <p class="card-text"><span class="fw-semibold">Jumlah Anak :</span> {{ $pegawai->jumlah_anak }} Orang</p>
 
+            <div class="text-center mt-5 mb-4">
+                <form action="{{ route('admin.pegawai.edit', $pegawai->id) }}" method="GET">
+                    <button type="submit" class="btn btn-success">
+                        <i class="bi bi-pencil-square"></i>
+                        Edit Data
+                    </button>
+                </form>
+            </div>
 
-            <div class="text-center mt-5">
+            <div class="text-center">
                 <a href="{{ route('admin.pegawai.index') }}" class="btn btn-warning">
                     <i class="bi bi-caret-left"></i>
                     <span>Kembali</span>
