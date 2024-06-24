@@ -5,7 +5,7 @@
 @endphp
 
 @section('title')
-    Detail Pegawai
+    Profil Admin
 @endsection
 
 @section('sidebar')
