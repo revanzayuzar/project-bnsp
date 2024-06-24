@@ -1,8 +1,8 @@
 /* Background Image Main */
 
-body {
-    background-image: url('');
-    background-size: cover;
+.bg-image-main {
+    background-image: url('../img/background.jpg');
+    background-size: auto;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }

@@ -8,7 +8,7 @@ use App\Http\Controllers\ProfilController;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');
 
 Auth::routes();
 

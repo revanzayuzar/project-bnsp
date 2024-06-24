@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
-@php
-    $title = 'Register';
-@endphp
+@section('title')
+    Register Admin
+@endsection
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card border-success shadow-lg">
                 <div class="card-header bg-success fs-5 text-light text-center">{{ __('Silahkan Register') }}</div>
 
                 <div class="card-body">
@@ -67,13 +67,20 @@
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-success col-8 d-block mx-auto mt-4 py-2">
+                                <button type="submit" class="btn btn-success col-8 d-block mx-auto mt-4 py-3">
                                     {{ __('Register') }}
                                 </button>
                             </div>
                         </div>
                     </form>
                 </div>
+            </div>
+
+            <div class="text-center my-5">
+                <a href="{{ route('index') }}" class="btn btn-warning px-5 py-2">
+                    <i class="bi bi-caret-left"></i>
+                    Kembali
+                </a>
             </div>
         </div>
     </div>

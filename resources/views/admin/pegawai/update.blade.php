@@ -49,12 +49,12 @@
         <form action="{{ route('admin.pegawai.update', $pegawai->id) }}" method="POST" class="p-3 px-sm-5" enctype="multipart/form-data">
             @csrf
             @method('PUT')
-            {{-- <div class="mx-0 mx-md-5 mx-lg-0 mx-xl-5 mb-4">
-                <label for="foto" class="form-label fw-semibold">Pilih Foto Pegawai</label>
+            <div class="mx-0 mx-md-5 mx-lg-0 mx-xl-5 mb-4">
+                <label for="foto" class="form-label fw-semibold">Ganti Foto Pegawai</label>
                 <input type="file" class="form-control p-2 border-success" id="foto" name="foto"
-                    value="{{ old('foto') }}" placeholder="Pilih Foto Pegawai" required
+                    value="{{ old('foto') }}" placeholder="Pilih Foto Pegawai"
                     oninvalid="this.setCustomValidity('Harap Pilih Foto Pegawai!')" oninput="setCustomValidity('')">
-            </div> --}}
+            </div>
 
             <div class="mx-0 mx-md-5 mx-lg-0 mx-xl-5 mb-4">
                 <label for="nama" class="form-label fw-semibold">Nama</label>

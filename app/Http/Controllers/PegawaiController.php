@@ -23,6 +23,7 @@ class PegawaiController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'foto' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'nama' => 'required|string|max:255',
             'nik' => 'required|string|max:16|unique:pegawais,nik',
             'jenis_kelamin' => 'required',
@@ -39,7 +40,10 @@ class PegawaiController extends Controller
             'jumlah_anak' => 'required|integer',
         ]);
 
+        $fotoPath = $request->file('foto')->store('foto_pegawai', 'public');
+
         $pegawai = new Pegawai();
+        $pegawai->foto = $fotoPath;
         $pegawai->nama = $request->input('nama');
         $pegawai->nik = $request->input('nik');
         $pegawai->jenis_kelamin = $request->input('jenis_kelamin');
@@ -76,6 +80,7 @@ class PegawaiController extends Controller
     public function update(Request $request, $id)
     {
         $validatedData = $request->validate([
+            'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'nama' => 'required|string|max:255',
             'nik' => 'required|string|max:16|unique:pegawais,nik,' . $id,
             'jenis_kelamin' => 'required',
@@ -108,11 +113,23 @@ class PegawaiController extends Controller
         $pegawai->pendidikan_terakhir = $validatedData['pendidikan_terakhir'];
         $pegawai->status_perkawinan = $validatedData['status_perkawinan'];
         $pegawai->jumlah_anak = $validatedData['jumlah_anak'];
+
+        // Menghandle upload foto baru jika ada
+        if ($request->hasFile('foto')) {
+            // Hapus foto lama jika ada
+            if ($pegawai->foto) {
+                Storage::disk('public')->delete($pegawai->foto);
+            }
+
+            // Simpan foto baru
+            $fotoPath = $request->file('foto')->store('foto_pegawai', 'public');
+            $pegawai->foto = $fotoPath;
+        }
+
         $pegawai->save();
 
         return redirect()->route('admin.pegawai.index')->with('success', 'Pegawai berhasil diedit.');
     }
-
 
     public function destroy($id)
     {

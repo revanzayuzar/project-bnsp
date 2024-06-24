@@ -22,6 +22,7 @@
     {{-- Custom CSS --}}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bg-image-main.css') }}">
 
     <title>
 
@@ -37,7 +38,7 @@
         <div class="sidebar col-9 col-sm-6 col-md-4 col-lg-3 col-xl-2 d-flex flex-column bg-success text-light p-3 overflow-y-auto position-absolute top-0 bottom-0"
             style="height: 100vh; left: 0;">
             <a href="{{ route('admin.dashboard.index') }}" class="text-decoration-none">
-                <h1 class="text-light fw-bold text-center mt-3 mb-5" style="font-size: 100px">
+                <h1 class="text-warning fw-bold text-center mt-3 mb-5" style="font-size: 100px">
                     P
                 </h1>
             </a>
@@ -52,14 +53,14 @@
         {{-- Sidebar Container End --}}
 
         {{-- Main Container --}}
-        <div class="col-12 col-lg-9 col-xl-10 bg-light overflow-y-auto position-absolute top-0 bottom-0" style="right: 0;">
+        <div class="bg-image-main col-12 col-lg-9 col-xl-10 bg-light overflow-y-auto position-absolute top-0 bottom-0" style="right: 0;">
             {{-- Main Header --}}
             <nav class="col-12 col-lg-9 col-xl-10 bg-warning d-flex justify-content-between align-items-center shadow-sm px-4 py-3 position-fixed top-0"
                 style="right: 0; z-index: 99">
                 <div class="d-flex align-items-center">
-                    <i class="sidebar-button bi bi-list fs-3" id="sidebarButton"></i>
+                    <i class="sidebar-button bi bi-list text-success fs-3" id="sidebarButton"></i>
                     <a href="{{ route('admin.dashboard.index') }}" class="text-decoration-none">
-                        <h1 class="text-dark fs-5 fw-semibold text-center mb-0" style="margin-left: 10px">
+                        <h1 class="text-success fs-5 fw-semibold text-center mb-0" style="margin-left: 10px">
                             PEGAWAI
                         </h1>
                     </a>
@@ -70,7 +71,7 @@
                         data-bs-toggle="dropdown" data-bs-auto-close="outside" class="rounded-circle"
                         style="width: 40px">
                     <ul class="dropdown-menu dropdown-menu-end bg-success mt-4 px-5 border-warning border-5" aria-labelledby="profileDropdown"
-                        style="width: max-content">
+                        style="width: max-content; border-radius: 20px">
                         <img src="{{ asset('img/profile.jpg') }}" alt="Profile" title="Profile"
                             class="rounded-circle d-block mx-auto my-3" style="width: 75px">
                         <h1 class="text-light fs-5 fw-semibold text-center">{{ Auth::user()->name }}</h1>

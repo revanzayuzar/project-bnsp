@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    Login Admin
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -63,7 +67,10 @@
             </div>
 
             <div class="text-center my-5">
-                <a href="{{ url('/') }}" class="btn btn-warning px-5 py-2">Kembali</a>
+                <a href="{{ route('index') }}" class="btn btn-warning px-5 py-2">
+                    <i class="bi bi-caret-left"></i>
+                    Kembali
+                </a>
             </div>
         </div>
     </div>
