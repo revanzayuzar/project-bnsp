@@ -24,8 +24,9 @@
 
 <body>
     <div class="d-flex justify-content-center align-items-center" style="height: 100vh">
-        <div class="col-10 col-sm-8 col-md-6 col-lg-4 bg-light px-3 py-5 px-sm-5 shadow-lg" style="border-radius: 10px">
-            <h1 class="fs-3 text-center mb-0 pb-1 border-bottom border-3">
+        <div class="col-10 col-sm-8 col-md-6 col-lg-4 bg-light px-3 py-5 px-sm-5 border border-dark border-5"
+            style="border-radius: 10px">
+            <h1 class="fs-5 text-center mb-0 py-2 border border-dark border-2 shadow" style="border-radius: 10px">
                 Selamat Datang
             </h1>
 
@@ -38,7 +39,8 @@
                     <i class="bi bi-door-open"></i>
                     Login
                 </a>
-                <a href="{{ route('register') }}" class="btn btn-success col-9 mt-4 py-2">
+                <small class="my-2">atau</small>
+                <a href="{{ route('register') }}" class="btn btn-success col-9 py-2">
                     <i class="bi bi-door-open"></i>
                     Register
                 </a>

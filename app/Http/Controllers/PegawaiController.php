@@ -134,6 +134,12 @@ class PegawaiController extends Controller
     public function destroy($id)
     {
         $pegawai = Pegawai::findOrFail($id);
+
+        // Hapus gambar terkait jika ada
+        if ($pegawai->foto) {
+            Storage::disk('public')->delete($pegawai->foto);
+        }
+
         $pegawai->delete();
 
         return redirect()->route('admin.pegawai.index')->with('success', 'Pegawai berhasil dihapus.');

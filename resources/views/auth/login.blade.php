@@ -8,10 +8,10 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card border-success shadow-lg">
-                <div class="card-header bg-success fs-5 text-light text-center">{{ __('Silahkan Login') }}</div>
+            <div class="card border-success border-2 shadow">
+                <div class="card-header bg-success fs-5 text-light text-center">{{ __('Silahkan Login (Masuk)') }}</div>
 
-                <div class="card-body">
+                <div class="card-body py-4">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -63,11 +63,16 @@
                             </div>
                         </div>
                     </form>
+
+                    <p class="col-md-6 offset-md-4 text-center mt-4 mb-0">
+                        Belum mempunyai akun? Silahkan
+                        <a href="{{ route('register') }}" class="text-decoration-none">Register</a>
+                    </p>
                 </div>
             </div>
 
-            <div class="text-center my-5">
-                <a href="{{ route('index') }}" class="btn btn-warning px-5 py-2">
+            <div class="text-center mt-5">
+                <a href="{{ route('index') }}" class="btn btn-primary px-5 py-2">
                     <i class="bi bi-caret-left"></i>
                     Kembali
                 </a>

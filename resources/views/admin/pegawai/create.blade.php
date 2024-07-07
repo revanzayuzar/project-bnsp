@@ -13,7 +13,7 @@
 @endsection
 
 @section('content')
-    <div class="col-11 col-xl-9 bg-success-subtle mx-auto border border-success" style="border-radius: 10px">
+    <div class="col-11 col-xl-9 bg-light mx-auto border border-success" style="border-radius: 10px">
         <h1 class="bg-success text-light fs-5 text-center mb-0 py-3"
             style="border-top-left-radius: 10px; border-top-right-radius: 10px">
             <i class="bi bi-plus-circle"></i>
@@ -21,21 +21,21 @@
         </h1>
 
         @error('nik')
-            <div class="alert alert-danger alert-dismissible m-3 mb-0" role="alert">
+            <div class="alert alert-danger alert-dismissible m-3" role="alert">
                 NIK yang Anda masukkan telah digunakan!
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @enderror
 
         @error('email')
-            <div class="alert alert-danger alert-dismissible m-3 mb-0" role="alert">
+            <div class="alert alert-danger alert-dismissible m-3" role="alert">
                 Email yang Anda masukkan telah digunakan!
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @enderror
 
         @error('nomor_telepon')
-            <div class="alert alert-danger alert-dismissible m-3 mb-0" role="alert">
+            <div class="alert alert-danger alert-dismissible m-3" role="alert">
                 Nomor Telepon yang Anda masukkan telah digunakan!
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
@@ -51,7 +51,7 @@
             <div class="mx-0 mx-md-5 mx-lg-0 mx-xl-5 mb-4">
                 <label for="foto" class="form-label fw-semibold">Pilih Foto Pegawai (Maks: 2 MB)</label>
                 <input type="file" class="form-control p-2 border-success" id="foto" name="foto"
-                    value="{{ old('foto') }}" placeholder="Pilih Foto Pegawai" required
+                    value="{{ old('foto') }}" placeholder="Pilih Foto Pegawai" required autofocus
                     oninvalid="this.setCustomValidity('Harap Pilih Foto Pegawai!')" oninput="setCustomValidity('')">
             </div>
 
@@ -118,11 +118,11 @@
             <div class="mx-0 mx-md-5 mx-lg-0 mx-xl-5 mb-4">
                 <label for="nomor_telepon" class="form-label fw-semibold">Nomor Telepon (12 - 15 angka)</label>
                 <input type="text"
-                    class="form-control p-2 border-success @error('email') is-invalid border-danger @enderror"
+                    class="form-control p-2 border-success @error('nomor_telepon') is-invalid border-danger @enderror"
                     id="nomor_telepon" name="nomor_telepon" value="{{ old('nomor_telepon') }}" minlength="12"
                     maxlength="15" placeholder="Masukkan Nomor Telepon" required
                     oninvalid="this.setCustomValidity('Harap Masukkan Nomor Telepon!')" oninput="setCustomValidity('')">
-                @error('email')
+                @error('nomor_telepon')
                     <div class="text-danger">Nomor Telepon yang Anda masukkan telah digunakan. Harap masukkan Nomor Telepon
                         lain!
                     </div>

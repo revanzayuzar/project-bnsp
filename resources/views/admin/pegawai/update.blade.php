@@ -13,7 +13,7 @@
 @endsection
 
 @section('content')
-    <div class="col-11 col-xl-9 bg-success-subtle mx-auto border border-success" style="border-radius: 10px">
+    <div class="col-11 col-xl-9 bg-light mx-auto border border-success" style="border-radius: 10px">
         <h1 class="bg-success text-light fs-5 text-center mb-0 py-3"
             style="border-top-left-radius: 10px; border-top-right-radius: 10px">
             <i class="bi bi-pencil-square"></i>
