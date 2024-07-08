@@ -82,7 +82,7 @@
             </div>
 
             <div class="text-center mt-5">
-                <a href="{{ route('index') }}" class="btn btn-primary px-5 py-2">
+                <a href="{{ route('index') }}" class="btn btn-primary py-2">
                     <i class="bi bi-caret-left"></i>
                     Kembali
                 </a>

@@ -19,7 +19,7 @@
             <span>SELAMAT DATANG ADMIN</span> <br>
             <span class="text-warning">{{ Auth::user()->name }}</span> !
         </h1>
-        <p class="my-3">Berikut merupakan beberapa informasi mengenai data Pegawai.</p>
+        <p class="m-3">Berikut merupakan beberapa informasi mengenai data Pegawai.</p>
     </div>
 
     <div class="d-flex flex-wrap flex-column align-items-center flex-md-row justify-content-md-evenly align-items-md-start">
